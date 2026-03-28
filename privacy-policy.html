@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TellTrack – Privacy Policy</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      max-width: 720px;
+      margin: 40px auto;
+      padding: 0 20px;
+      color: #1a1a1a;
+      line-height: 1.7;
+    }
+    h1 { font-size: 1.8rem; margin-bottom: 4px; }
+    h2 { font-size: 1.15rem; margin-top: 2rem; color: #333; }
+    p, li { font-size: 0.97rem; }
+    ul { padding-left: 1.4em; }
+    .meta { color: #777; font-size: 0.88rem; margin-bottom: 2rem; }
+    a { color: #0070f3; }
+  </style>
+</head>
+<body>
+
+<h1>Privacy Policy – TellTrack</h1>
+<p class="meta">Last updated: 28 March 2026</p>
+
+<p>
+  TellTrack ("the app", "we") is a GPS trail navigation app that records your
+  movement and guides you back along your route. This policy explains what data
+  the app collects, how it is used, and your choices.
+</p>
+
+<h2>1. Data We Collect</h2>
+
+<h3>Location data</h3>
+<p>
+  The app continuously records your GPS coordinates (latitude, longitude,
+  altitude, and timestamp) while a recording session is active. This happens in
+  the foreground <em>and</em> in the background (while your screen is locked or
+  the app is not visible) so that your track is not lost during a ski run or hike.
+  Location data is stored locally on your device in GPX format.
+</p>
+
+<h3>Recorded tracks (uploaded to our server)</h3>
+<p>
+  When a recording ends, the app uploads your GPX track to our server at
+  <code>track.shippy.no</code>. The upload includes:
+</p>
+<ul>
+  <li>The GPX file (timestamped GPS coordinates for the recorded session)</li>
+  <li>An anonymous device identifier (Apple's
+      <code>identifierForVendor</code> — resets if you uninstall the app and
+      cannot be used to identify you across apps or companies)</li>
+  <li>Metadata: number of GPS points, distance (metres), and duration</li>
+  <li>A randomly generated UUID for the track (prevents duplicate uploads)</li>
+</ul>
+<p>
+  If your device is offline when a session ends, the upload is queued and retried
+  automatically when connectivity is restored.
+</p>
+
+<h3>GPX files you open</h3>
+<p>
+  The app can open <code>.gpx</code> files from other apps or your Files app.
+  These files are read locally and are never uploaded.
+</p>
+
+<h2>2. Data We Do NOT Collect</h2>
+<ul>
+  <li>Your name, email address, or any account credentials</li>
+  <li>Contacts, photos, microphone, or camera data</li>
+  <li>Advertising identifiers or cross-app tracking</li>
+  <li>Crash logs or analytics beyond what Apple provides to all developers</li>
+</ul>
+
+<h2>3. How We Use the Data</h2>
+<p>Uploaded tracks are used solely to:</p>
+<ul>
+  <li>Build and improve the trail database that powers in-app navigation</li>
+  <li>Detect and correct errors in existing trail routes</li>
+</ul>
+<p>
+  Track data is not sold, shared with advertisers, or used for any purpose
+  unrelated to trail navigation.
+</p>
+
+<h2>4. Data Retention</h2>
+<p>
+  Tracks are stored on our server for as long as they are useful for trail
+  improvement. You may request deletion of any track associated with your device
+  identifier by contacting us (see Section 7).
+</p>
+
+<h2>5. Legal Basis (GDPR)</h2>
+<p>
+  If you are located in the European Economic Area, our legal basis for
+  processing location data is <strong>legitimate interest</strong>
+  (improving trail navigation for the app's users). No personal data as defined
+  by GDPR (name, email, etc.) is collected or transmitted.
+</p>
+
+<h2>6. Children's Privacy</h2>
+<p>
+  The app is not directed at children under 13. We do not knowingly collect data
+  from children. If you believe a child has used the app and you have concerns,
+  please contact us.
+</p>
+
+<h2>7. Your Rights and Contact</h2>
+<p>
+  You may request deletion of any data associated with your device by emailing:
+  <br />
+  <a href="mailto:sverre@stendal.no">sverre@stendal.no</a>
+</p>
+<p>
+  Please include "TellTrack data deletion" in the subject line. We will respond
+  within 30 days.
+</p>
+
+<h2>8. Changes to This Policy</h2>
+<p>
+  If we make material changes, we will update the date at the top of this page.
+  Continued use of the app after changes constitutes acceptance of the updated
+  policy.
+</p>
+
+</body>
+</html>
