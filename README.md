@@ -27,31 +27,6 @@ TellTrack records a GPS path and guides you back to the start using voice direct
 - Xcode 8+
 - CocoaPods
 
-## Setup
-
-```bash
-pod install
-open TellTrack.xcworkspace
-```
-
-## Architecture
-
-| Layer | Description |
-|---|---|
-| `RecordViewController` | Main screen; starts GPS recording, shows info box, battery/accuracy graphs |
-| `NavigateBackViewController` | Guides user back along recorded track; map overlay with voice |
-| `MiniGraphView` | Reusable scrolling line graph (stretch-to-fit, fill-under-curve) |
-| `TrackUploader` | GPX builder, anonymous upload, UUID deduplication, offline retry queue |
-| `AppMenuViewController` | Cogwheel menu: Demo-track, EULA, About |
-| `EULAViewController` | Scrollable EULA, English + Norwegian (auto-detected by device language) |
-| `AboutViewController` | App info page |
-| `FollowPathViewController` | Legacy navigation screen; location updates, voice guidance, timer |
-| `ClosestCoord` | Core path-following algorithm; calculates distance to path and heading deviation |
-| `GlobalVariables` | Path loading, Douglas-Peucker simplification, turn detection, shared state |
-| `SelectPathTableViewController` | GPX file browser with import/delete/rename |
-| `MapViewController` | MKMapView with polyline overlays and waypoint annotations |
-| `SettingsViewController` | Sliders for voice interval, off-track distance, waypoint alert distance |
-| `InfoViewController` | Read-only navigation statistics display |
 
 ## Voice Guidance Modes
 
@@ -71,36 +46,13 @@ The app combines movement state and trail position to decide what to announce:
 
 Speech is suppressed when standing still after the message has already been said once.
 
-## Key Algorithms
-
-- **Douglas-Peucker** line simplification to reduce path points before navigation
-- **Haversine / bearing** calculations for GPS distance and direction
-- **Heron's formula** for perpendicular distance from user to path segment
-- **Wrong-way detection** via consecutive distance-delta comparisons
-
-## Dependencies
-
-- [iOS-GPX-Framework](https://github.com/merlos/iOS-GPX-Framework) (v0.0.2) — GPX parsing
-- TBXML (v1.5) — XML parsing
-
-## Localization
-
-English, Norwegian (nb), Japanese, Simplified Chinese, Hindi, Polish, Spanish (Mexico)
 
 ## Permissions
 
 - Location (Always) — required for background navigation
 - Background modes: `location`, `audio`
 
-## Backend Server
 
-A lightweight Flask API on a Raspberry Pi, exposed via Cloudflare Tunnel at `https://track.shippy.no`.
-
-- Anonymous track upload (no device name, no user identity)
-- UUID-based deduplication — no duplicate tracks even on retry
-- Web viewer: device list, Leaflet map, swipe-to-delete, GPX download
-- Statistics page: uploads per day, per device, longest track
-- Runs as `systemd` services (`trackserver`, `cloudflared`) — auto-starts on Pi reboot
 
 
 
