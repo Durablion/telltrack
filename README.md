@@ -102,13 +102,6 @@ A lightweight Flask API on a Raspberry Pi, exposed via Cloudflare Tunnel at `htt
 - Statistics page: uploads per day, per device, longest track
 - Runs as `systemd` services (`trackserver`, `cloudflared`) — auto-starts on Pi reboot
 
-See `server/README.md` for setup and API reference.
 
-## RTK Base Station
 
-A companion RTK GNSS base station script (`Claudecode/rtk/base.py`) drives a Quectel LG290P module:
 
-- Survey-in mode (60s min, 2.0m accuracy threshold)
-- NTRIP caster on port 2101, mountpoint: BASE
-- Broadcasts RTCM3.3 to rover clients
-- Runs as `systemd` service (`rtkbase`) — auto-starts on Pi reboot
