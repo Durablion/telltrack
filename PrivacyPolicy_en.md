@@ -19,7 +19,7 @@ To provide functionality, improve the app, and ensure reliability.
 Consent, contract, and legitimate interest.
 
 ## 6. Data Sharing  
-We do not sell data. Data may be shared with service providers.
+We do not share your data.
 
 ## 7. Your Rights  
 Access, deletion, correction, portability.
