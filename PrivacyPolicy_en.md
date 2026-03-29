@@ -25,4 +25,4 @@ We do not share your data.
 Access, deletion, correction, portability.
 
 ## 8. Contact  
-sverre.h.stendal@gmail.com
+telltrack.navtell@gmail.com
